@@ -1,5 +1,5 @@
-hello-scipy.dist 
-hello-scipy.build
+*.dist*
+*.build*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
