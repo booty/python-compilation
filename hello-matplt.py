@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.integrate import quad
 
 def main():
@@ -20,6 +21,19 @@ def main():
     print("Determinant of matrix [[1,2],[3,4]]:", determinant)
     print("Integral of sin(x) from 0 to pi:", integral_result, "with error estimate:", integral_error)
     print("If you made it this far, seems like numpy and scipy are working fine.")
+    
+    # Generate a sine wave series and display it with a graph
+    x = np.linspace(0, 2 * np.pi, 100)
+    y = np.sin(x)
+    
+    plt.figure(figsize=(8, 4))
+    plt.plot(x, y, label='sin(x)', color='blue', linewidth=2)
+    plt.xlabel("x (radians)")
+    plt.ylabel("sin(x)")
+    plt.title("Sine Wave")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
     
     input("Press Enter to exit...")
 if __name__ == "__main__":

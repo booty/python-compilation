@@ -1,3 +1,7 @@
+# Compiled Python
+
+POC for compiling Python into Windows executables.
+
 ## Windows Setup
 
 Apologies if I missed a few steps.
