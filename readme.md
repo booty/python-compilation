@@ -18,13 +18,18 @@ pip install -r requirements.txt
 nuitka --standalone .\hello-scipy.py
 ```
 
+### Results
+
+- The "hello-scipy.dist" folder that contains the .exe is 171MB
+- This compresses pretty well (35MB .7z, 60MB .zip)
+
 ### Notes
 
 My Windows machine is a i5-13400F (10 cores, 16 threads) with 64GB RAM and NVMe SSD.
 
-Compilation took about 15 minutes. The first part of it seemed to peg 2 cores @ 100%.
+**First** compilation took about 15-20 minutes. The first part of it seemed to peg 2 cores @ 100%. The second portion took ??? minutes and pegged all 16 cores @ 100%. You may want to have a fire extinguisher ready.
 
-The second portion took ??? minutes and pegged all 16 cores @ 100%.
+**Second** compilation took "only" 4m46sec, seemed to use cached results from first time
 
 According to the docs, cross-compilation is highly unfinished. Assume a Windows machine is necessary for compilation.
 
